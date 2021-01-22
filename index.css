@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Old+Standard+TT&display=swap");
+
+body {
+    margin: 0 auto;
+    padding: 1em;
+    font-family: lato, sans-serif;
+    max-width: 1000px;
+    min-width: 200px;
+}
+
+header {
+    background: #4d194d;
+    color: #fff;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.container {
+    
+}
+
+select,
+option, 
+input {
+    text-transform: uppercase;
+    height: 40px;
+	font-size: 20px;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	padding-left: .5rem;
+    margin-top: .5em;
+    background: #48cae4;
+}
+
+input[type=number]:invalid,
+input[type=number]:out-of-range {
+    border: 2px solid #e60023;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  	-webkit-appearance: none;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 2em;
+}
+
+.input {
+    padding: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    background-color: #000;
+    font-size: 20px;
+}
+
+.categories {
+    
+}
+
+/* InFront of card  */
+
+.card {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 16, 0.19),
+                0 0.3rem 0.3rem rgba(0, 0, 16, 0.23); 
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 2rem;
+}
+
+.each-product {
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.product {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 70% 20% 10%;
+    grid-gap: 1em;
+    align-items: end;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
+}
+
+.product-image {
+    grid-row: 1;
+    max-width: 100%;
+    max-height: 200px;
+    margin: auto;
+}
+
+.product-title {
+    grid-row: 2;
+    color: #4d194d;
+    padding-bottom: 2em;
+}
+
+.product-info{
+    grid-row: 3;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    padding-bottom: 2em;
+    color: #144552;
+}
+
+.product-info strong {
+    color: #4d194d;
+    text-transform:  uppercase;
+}
+
+.product-price {
+    padding-right: 1rem;
+}
+
+.product-category {
+    padding-left: 1rem;
+}
+
+/* Back Side of Product */
+
+.description {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    padding: 2rem;
+    width: calc(90% - (1.5rem * 2));
+    height: calc(90% - (1.5rem * 2));
+    background: white;
+    overflow-y: auto;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.description:hover {
+    opacity: 0.95;
+}
+
+.description-name {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    color: #00296b;
+}
+
+.description-category {
+    font-size: .8rem;
+    margin: 1em 0;
+    color: #2c7da0;
+    border-bottom: 3px solid #144552;
+    padding-bottom: 1em;
+}
+
+.description-product {
+    color: #540b0e;
+    line-height: 1.4rem;
+}
